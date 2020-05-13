@@ -106,41 +106,6 @@ telInput2.intlTelInput({
 });
 
 
-// Helper function to get form data in the supported format
-function getFormDataString(formEl) {
-    var formData = new FormData(formEl),
-        data = [];
-
-    for (var keyValue of formData) {
-        data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
-    }
-
-    return data.join("&");
-}
-
-// Fetch the form element
-var reservationForm = document.getElementById("reservation-form");
-
-// Override the submit event
-reservationForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    var request = new XMLHttpRequest();
-
-    request.addEventListener("load", function () {
-        if (request.status === 302) { // CloudCannon redirects on success
-            // It worked
-        }
-    });
-
-    request.open(reservationForm.method, reservationForm.action);
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send(getFormDataString(reservationForm));
-    reservationForm.style.display = 'none';
-    document.getElementById('reservation-alert').style.display = 'block';
-});
-
-
 // Cursor 
 const cursor = $(".cursor"),
     body = $("body"),
@@ -229,3 +194,25 @@ cursorBind();
         }
     });
 })(jQuery);
+// Reservation form with PHP
+if ($('#reservation-form').length) {
+    $('#reservation-form').each(function(){
+        $(this).validate({
+            errorClass: 'error wobble-error',
+            submitHandler: function(form){
+                $.ajax({
+                    type: "POST",
+                    url:"./includes/mail-2.php",
+                    data: $(form).serialize(),
+                    success: function() {
+                        document.querySelector('.alert-success').style.display = 'block';
+                    },
+
+                    error: function(){
+                        document.querySelector('.alert-danger').style.display = 'block';
+                    }
+                });
+            }
+        });
+    });
+}

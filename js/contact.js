@@ -29,5 +29,51 @@ contactForm.addEventListener("submit", function (e) {
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send(getFormDataString(contactForm));
     contactForm.style.display = 'none';
-    document.getElementById('alert').style.display = 'block';
+
 });
+// Reservation form with PHP
+if ($('#contact-form').length) {
+    $('#contact-form').each(function(){
+        $(this).validate({
+            errorClass: 'error wobble-error',
+            submitHandler: function(form){
+                $.ajax({
+                    type: "POST",
+                    url:"./includes/mail.php",
+                    data: $(form).serialize(),
+                    success: function() {
+                        document.getElementById('alert-success').style.display = 'block';
+                        console.log("success");
+                    },
+
+                    error: function(){
+                        document.getElementById('alert-error').style.display = 'block';
+                        console.log("error");
+                    }
+                });
+            }
+        });
+    });
+}
+// Reservation form with PHP
+if ($('#reservation-form').length) {
+    $('#reservation-form').each(function(){
+        $(this).validate({
+            errorClass: 'error wobble-error',
+            submitHandler: function(form){
+                $.ajax({
+                    type: "POST",
+                    url:"./includes/mail.php",
+                    data: $(form).serialize(),
+                    success: function() {
+                        document.getElementById('alert-success').style.display = 'block';
+                    },
+
+                    error: function(){
+                        document.getElementById('alert-danger').style.display = 'block';
+                    }
+                });
+            }
+        });
+    });
+}

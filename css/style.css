@@ -709,13 +709,6 @@ nav {
     color: #000;
 }
 
-#reservation-alert {
-    max-width: 522px;
-    margin: 60px auto;
-    text-align: center;
-    display: none;
-}
-
 .intl-tel-input {
     display: block !important;
 }
@@ -817,4 +810,11 @@ animation-delay: -1s;
     50% {
         transform: scale(1);
     }
+}
+
+.alert {
+    max-width: 522px;
+    margin: 60px auto;
+    text-align: center;
+    display: none;
 }

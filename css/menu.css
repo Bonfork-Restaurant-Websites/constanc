@@ -804,7 +804,7 @@ nav {
     color: #000;
 }
 
-#reservation-alert {
+.alert {
     max-width: 522px;
     margin: 60px auto;
     text-align: center;
