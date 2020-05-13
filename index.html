@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A demo website for the Constanc Restaurant Template" />
+    <meta name="keywords" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://constanc.bonfork.net" />
+    <meta property="og:title" content="Constanc Restaurant" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="A demo website for the Constanc Restaurant Template" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com/">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net/">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com/">
+    <!--
+    ____   __   __ _  ____  __  ____  __ _
+    (  _ \ /  \ (  ( \(  __)/  \(  _ \(  / )
+    ) _ ((  O )/    / ) _)(  O ))   / )  (
+    (____/ \__/ \_)__)(__)  \__/(__\_)(__\_)
+    -->
+    <title>Constanc</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hp-video.css">
+    <!-- for the loading spinner -->
+    <link rel="stylesheet" href="css/animsition.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <!-- For Safari date/time picker -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css">
+
+    <!-- Schema json -->
+    <script id="data" type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Restaurant",
+            "priceRange": "$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Toronto",
+              "addressRegion": "ON",
+              "addressCountry": "Canada",
+              "postalCode": "M5E 1Z9",
+              "streetAddress": "12 Yonge St."
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 43.643162,
+                "longitude": -79.376259
+            },
+            "name": "Constanc Restaurant",
+            "telephone": "+44 (0)1234 56789",
+            "url": "https://constanc.bonfork.net",
+            "paymentAccepted": "",
+            "description": "Constanc Restaurant Demo description. Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam id urna egestas ultricies nulla at viverra nibh donec sollicitudin metus sit amet est laoreet gravida donec cursus enim quis.",
+          
+            "servesCuisine": "French cuisine",
+            "hasMenu": "https://constanc.bonfork.net/menu",
+            "acceptsReservations": "True",
+
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday"
+                    ],
+                    "opens": "18:00",
+                    "closes": "04:00",
+                    "is_open": true
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Sunday"
+                    ],
+                    "is_open": false
+                }
+            ]
+          }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=ID_PROPERTY_HERE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'ID_PROPERTY_HERE');
+    </script>
+
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('safari') != -1) {
+            if (ua.indexOf('chrome') > -1) {
+                console.log('chrome');
+            } else {
+                if (ua.match(/iPad/i) || ua.match(/iPhone/i)) {
+                    console.log('ios safari');
+                }
+                else {
+                    jQuery(function ($) { //on document.ready
+                        $('#date').datepicker({ dateFormat: 'yy-mm-dd', minDate: 0 });
+                    });
+
+                    $(function () {
+                        $('#time').timepicker().val('7:30pm');
+                    });
+                }
+            }
+        }
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        // Make Recaptcha Required
+        setTimeout(() => {
+            document.getElementById('g-recaptcha-response').setAttribute('required', 'required');
+        }, 1000);
+    </script>
+</head>
+
+<body>
+    <div class="p-0 m-0 animsition">
+        <nav class="navbar  navbar-light fixed-top">
+            <a class="navbar-brand" href="index.html" title="Go to home"></a>
+            <button class="header__menu-button header-button" type="button">
+                <span class="top-bar mr-0 ml-auto"></span>
+                <span class="middle-bar mr-0 ml-auto"></span>
+                <span class="bottom-bar mr-0 ml-auto"></span>
+            </button>
+            <div class="menu-panel header__menu">
+                <div class="menu-panel__inner">
+                    <button class="header__menu-button header__menu-button_fixed mr-0 ml-auto toggle-button" type="button">
+                        <span class="top-bar mr-0 ml-auto"></span>
+                        <span class="middle-bar mr-0 ml-auto" style="background: #272626;"></span>
+                        <span class="bottom-bar mr-0 ml-auto"></span>
+                    </button>
+                    <div class="menu-panel__menu mt-5">
+                        <div class="menu-panel__menu-item">
+                            <a class="menu-panel__menu-link menu-panel__menu-link_active" href="index.html" title="Home">Home</a>
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <a class="menu-panel__menu-link" href="story.html" title="Our Story">Our Story</a>
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <a class=" menu-panel__menu-link" href="menu.html" title="What's cooking">What's cooking</a>
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <a class="menu-panel__menu-link" href="gallery.html" title="Gallery">Gallery</a>
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <a class="menu-panel__menu-link" href="contact.html" title="Contacts">Contacts</a>
+                        </div>
+                    </div>
+                    <div class="menu-panel__footer">
+                        <div class="menu-panel__bottom">
+                            <p>1092 queen street west</p>
+                            <p>
+                                <a href="tel:(647) 893-1029" title="Call us">(647) 893-1029</a>
+                            </p>
+
+                            <div class="menu-panel__socials mt-4">
+                                <a href="#" title="Follow on Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" title="Follow on Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" title="Follow on Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div class="left-side">
+                <div class="video d-none d-sm-block">
+                    <video autoplay muted loop id="myVideo" class="position-absolute">
+                        <source src="images/video.mp4" type="video/mp4">
+                        <img src="images/hp-bg.jpg" title="Your browser does not support the <video> tag">
+                    </video>
+                    <div class="topOpacity d-block d-md-none"></div>
+                </div>
+                <img src="images/hp-bg.jpg" class="img-fluid bg-image d-block d-sm-none" alt="Bg Image">
+                <div class="row no-gutters bottom">
+                    <div class="col-md-5 pl-md-3 text-center text-md-left order-2 order-md-1">
+                        <span>Website by
+                            <a href="https://bonfork.com/" title="Bonfork">Bonfork</a>
+                        </span>
+                    </div>
+                    <div class="col-md-7 text-center text-md-right order-1 order-md-2">
+                        <a href="#" class="btn btn-book" data-toggle="modal" data-target="#reservationModal" title="Book your table">Book your table</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="menu">
+                    <div class="menu-inner">
+                        <a href="#">
+                            <img src="images/logo.svg" alt="Logo">
+                        </a>
+                        <div class="menu-links">
+                            <a href="story.html" title="Our Story">Our story</a>
+                            <a href="menu.html" title="What's cooking">What's cooking</a>
+                            <a href="gallery.html" title="Gallery">Gallery</a>
+                            <a href="contact.html" title="Contacts">Contacts</a>
+                        </div>
+
+                        <div class="hr-line"></div>
+
+                        <p>1092 queen street west</p>
+                        <p>
+                            <a href="tel:(647) 893-1029" title="Call us">(647) 893-1029</a>
+                        </p>
+                    </div>
+
+                    <div class="social-media">
+                        <a href="#" title="Follow on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" title="Follow on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" title="Follow on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Reservation Modal -->
+        <div id="reservationModal" class="modal permalink page-model modal-fullscreen" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-modal">
+                        <span aria-hidden="true">
+                            <img src="images/close.svg" title="Close">
+                        </span>
+                    </button>
+                    <div class="modal-body">
+                        <h2>Reserve
+                            <br> your table</h2>
+                        <div class="alert alert-success" role="alert" id="reservation-alert">
+                            Your reservation request has been sent. One of our staff will get back to you with a confirmation.
+                        </div>
+                        <form id="reservation-form" method="post">
+                            <div class="form-group">
+                                <label for="NO. of Guests">NO. of guests*</label>
+                                <input type="number" name="NO. of Guests" class="form-control" value="2" placeholder="Please Select" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="Time">Time*</label>
+                                        <input type="text" name="Time" id="time" class="form-control" value="19:30" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="Date">Date*</label>
+                                        <input type="text" name="Date" id="date" class="form-control" placeholder="Please Select" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Name">Name*</label>
+                                <input type="text" name="Name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Email">Email*</label>
+                                <input type="email" name="Email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="setCustomValidity('Please enter a valid email address!')"
+                                    onchange="setCustomValidity('')" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Phone">Phone*</label>
+                                <br>
+                                <input type="tel" name="Phone" id="phone" class="form-control" required>
+                            </div>
+
+                            <div class="g-recaptcha" data-sitekey="6LeOfscSAAAAAKD9-ghZaZ907gH4-wJ9k2f5l9F4"></div>
+
+                            <button type="submit" class="btn btn-submit">Book your table</button>
+
+                            <input type="hidden" name="_to" value="matty@aledia.ca">
+                            <input type="text" name="_gotcha" style="display: none;">
+                            <input type="hidden" name="_subject" value="Reservation Submission">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cursor">
+            <span class="off"></span>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/animsition.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('safari') != -1) {
+            if (ua.indexOf('safari') != -1) {
+                document.getElementById('date').type = 'date';
+                document.getElementById('time').type = 'time';
+            } else {
+                if (ua.match(/iPad/i) || ua.match(/iPhone/i)) {
+                    document.getElementById('time').type = 'time';
+                }
+                else {
+                    console.log('safari');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
