@@ -1,4 +1,4 @@
-// Reservation form with PHP
+
 if ($('#contact-form').length) {
     $('#contact-form').each(function(){
         $(this).validate({
