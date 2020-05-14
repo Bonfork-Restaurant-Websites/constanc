@@ -1,21 +1,21 @@
 // Reservation form with PHP
-if ($('#contact-form').length) {
-    $('#contact-form').each(function(){
+if ($('#reservation-form').length) {
+    $('#reservation-form').each(function(){
         $(this).validate({
             errorClass: 'error wobble-error',
             submitHandler: function(form){
                 $.ajax({
                     type: "POST",
-                    url:"./includes/mail.php",
+                    url:"./includes/mail-2.php",
                     data: $(form).serialize(),
                     success: function() {
-                        document.getElementById('alert-success').style.display = 'block';
-                        console.log("success");
+                        document.querySelector('.alert-success').style.display = 'block';
+                        console.log("SuccessGero");
                     },
 
                     error: function(){
-                        document.getElementById('alert-error').style.display = 'block';
-                        console.log("error");
+                        document.querySelector('.alert-danger').style.display = 'block';
+                        console.log("failGero");
                     }
                 });
             }

@@ -2,6 +2,16 @@ body, html {
     overflow-x: hidden;
     background: #000;
 }
+.alert {
+    max-width: 522px;
+    margin: 60px auto;
+    text-align: center;
+
+}
+.alert.alert-success,
+.alert.alert-danger{
+    display: none ;
+}
 
 .left-side {
     position: relative;

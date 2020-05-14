@@ -56,11 +56,10 @@
     });
 })();
 
-
-let telInput = $("#phone");
+let telInput2 = $("#contact-phone");
 
 // initialize
-telInput.intlTelInput({
+telInput2.intlTelInput({
     initialCountry: 'auto',
     separateDialCode: true,
     autoPlaceholder: 'aggressive',
@@ -81,10 +80,11 @@ telInput.intlTelInput({
     }
 });
 
-let telInput2 = $("#contact-phone");
+
+let telInput = $("#phone");
 
 // initialize
-telInput2.intlTelInput({
+telInput.intlTelInput({
     initialCountry: 'auto',
     separateDialCode: true,
     autoPlaceholder: 'aggressive',
@@ -194,25 +194,3 @@ cursorBind();
         }
     });
 })(jQuery);
-// Reservation form with PHP
-if ($('#reservation-form').length) {
-    $('#reservation-form').each(function(){
-        $(this).validate({
-            errorClass: 'error wobble-error',
-            submitHandler: function(form){
-                $.ajax({
-                    type: "POST",
-                    url:"./includes/mail-2.php",
-                    data: $(form).serialize(),
-                    success: function() {
-                        document.querySelector('.alert-success').style.display = 'block';
-                    },
-
-                    error: function(){
-                        document.querySelector('.alert-danger').style.display = 'block';
-                    }
-                });
-            }
-        });
-    });
-}

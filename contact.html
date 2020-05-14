@@ -140,11 +140,11 @@
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-        // Make Recaptcha Required
-        // setTimeout(() => {
-        //     document.getElementById('g-recaptcha-response').setAttribute('required', 'required');
-        //     document.getElementById('g-recaptcha-response-1').setAttribute('required', 'required');
-        // }, 1000);
+        Make Recaptcha Required
+        setTimeout(() => {
+            document.getElementById('g-recaptcha-response').setAttribute('required', 'required');
+            document.getElementById('g-recaptcha-response-1').setAttribute('required', 'required');
+        }, 1000);
     </script>
 </head>
 
@@ -315,12 +315,12 @@
                     <div class="modal-body">
                         <h2>Reserve
                             <br> your table</h2>
-                        <div class="alert alert-success" role="alert" id="reservation-alert">
-                            Your reservation request has been sent. One of our staff will get back to you with a confirmation.
-                        </div>
-                        <div class="alert alert-danger" role="alert" id="reservation-alert">
-                            Something went wrong!
-                        </div>
+                            <div class="alert alert-success test" role="alert">
+                                Your reservation request has been sent. One of our staff will get back to you with a confirmation.
+                            </div>
+                            <div class="alert alert-danger test" role="alert">
+                                Something went wrong!
+                            </div>
                         <form id="reservation-form" method="post">
                             <div class="form-group">
                                 <label for="NO. of Guests">NO. of guests*</label>
@@ -384,6 +384,7 @@
     <script src="js/animsition.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/reservation.js"></script>
     <script src="js/main.js"></script>
 
     <script>
